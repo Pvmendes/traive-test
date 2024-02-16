@@ -88,8 +88,6 @@ func (handler *TransactionHandler) ListTransactions(c *gin.Context) {
 	origin := c.DefaultQuery("origin", "")
 	userID := c.DefaultQuery("userID", "")
 
-	//validate and sanitize query parameters here.
-
 	filter := make(map[string]interface{})
 	if origin != "" {
 		filter["origin"] = origin
